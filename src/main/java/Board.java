@@ -5,7 +5,7 @@ public class Board {
     public Board(){
         board[0] = new Square("GO", 0);
 
-        for(int i = 0; i < 40; i++){
+        for(int i = 1; i < 40; i++){
             board[i] = new Square("Square " + i, i);
         }
     }
