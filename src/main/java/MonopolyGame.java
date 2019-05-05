@@ -12,15 +12,14 @@ public class MonopolyGame {
 
     private int roundCnt;
 
-    public MonopolyGame(){
+    public MonopolyGame() throws IllegalArgumentException{
         System.out.println("Please enter the number of players (between 2 and 8): ");
 
         Scanner scanner = new Scanner(System.in);
         int numberOfPlayers = scanner.nextInt();
 
-        while(numberOfPlayers < 2 || numberOfPlayers > 8){
-            System.out.println("Wrong number of players, must be between 2 and 8: ");
-            numberOfPlayers = scanner.nextInt();
+        if(numberOfPlayers < 2 || numberOfPlayers > 8){
+            throw new IllegalArgumentException("Wrong number of players, must be between 2 and 8: ");
         }
 
         players = new Player[numberOfPlayers];
