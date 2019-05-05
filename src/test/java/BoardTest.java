@@ -17,6 +17,7 @@ public class BoardTest {
         assertEquals("GO", board.start().toString());
         for(int i = 1; i < 40; i++){
             assertEquals(board.getSquare(board.start(),i).getIndex(), i);
+            assertNotNull(board.getSquare(board.start(),i));
         }
     }
 

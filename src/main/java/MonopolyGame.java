@@ -3,7 +3,11 @@ import Player.Player;
 
 import java.util.Scanner;
 
+/**
+ * The main class representing a monopoly board, used to simulate a 20 round game
+ */
 public class MonopolyGame {
+    private final int ROUND_TO_PLAY = 20;
 
     private Cup cup = new Cup();
     private Board board = new Board();
@@ -18,6 +22,7 @@ public class MonopolyGame {
         Scanner scanner = new Scanner(System.in);
         int numberOfPlayers = scanner.nextInt();
 
+        // we must have between 2 and 8 players
         if(numberOfPlayers < 2 || numberOfPlayers > 8){
             throw new IllegalArgumentException("Wrong number of players, must be between 2 and 8: ");
         }
@@ -31,13 +36,19 @@ public class MonopolyGame {
         roundCnt = 0;
     }
 
+    /**
+     * play 20 round
+     */
     public void playGame(){
-        while (roundCnt < 20){
+        while (roundCnt < ROUND_TO_PLAY){
             playRound();
             roundCnt++;
         }
     }
 
+    /**
+     * each player takes a turn
+     */
     private void playRound(){
         System.out.println("Turn number " + roundCnt + ":");
         for(Player p : players){

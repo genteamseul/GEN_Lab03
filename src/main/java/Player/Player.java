@@ -14,10 +14,17 @@ public class Player {
         this.piece = new Piece(playerNumber);
     }
 
+    /**
+     * Simulate a player turn
+     * @param cup The dice to roll
+     * @param board The board the player plays on
+     */
     public void takeTurn(Cup cup, Board board){
 
+        //we roll up the dice
         cup.roll();
 
+        //move  the piece on the board
         Square newLocation = board.getSquare(piece.getLocation(), cup.getTotal());
         piece.setLocation(newLocation);
 

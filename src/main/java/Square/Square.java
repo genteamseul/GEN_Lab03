@@ -2,6 +2,9 @@ package Square;
 
 import Player.Player;
 
+/**
+ * Class representing any square on a monopoly board
+ */
 public abstract class Square {
 
     private String name;
