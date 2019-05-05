@@ -1,8 +1,11 @@
+import Game.*;
+import Player.Player;
+
 import java.util.Scanner;
 
 public class MonopolyGame {
 
-    private Die[] dice = new Die[]{new Die(), new Die()};
+    private Cup cup = new Cup();
     private Board board = new Board();
 
     private Player[] players;
@@ -39,7 +42,7 @@ public class MonopolyGame {
     private void playRound(){
         System.out.println("Turn number " + roundCnt + ":");
         for(Player p : players){
-            p.takeTurn(dice, board);
+            p.takeTurn(cup, board);
         }
     }
 
