@@ -1,10 +1,14 @@
+package Player;
+
+import Square.Square;
+
 public class Piece {
 
     private String name;
     private Square location;
 
     public Piece(int pieceNumber){
-        this.name = "Piece " + pieceNumber;
+        this.name = "Player.Piece " + pieceNumber;
     }
 
     public Square getLocation() {

@@ -1,4 +1,8 @@
-public class Square {
+package Square;
+
+import Player.Player;
+
+public abstract class Square {
 
     private String name;
     private int index;
@@ -15,5 +19,7 @@ public class Square {
     public String toString(){
         return name;
     }
+
+    public abstract void landedOn(Player player);
 
 }
