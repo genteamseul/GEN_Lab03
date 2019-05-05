@@ -28,3 +28,5 @@ GEN_Lab03.iml
 *.idea
 
 target/*
+
+*.iml
